@@ -8,7 +8,7 @@
  * [参考](#参考)
 
 ## 介绍
-AntRunner是MuseLab设计实现的便携式天线旋转器，支持360度方位角和180度俯仰角的控制，可承重最大5KG的天线，支持平台 Windows/Linux/Mac/RaspberryPi/Android，配合对应的开源上位机可实现卫星的实时自动指向跟踪，支持有线（串口）与无线（ Wifi 2.4G）2种控制方式，支持多种规格的天线（一般为八木天线），安装方便。使用12V电池供电，可利用充电宝+12V快充诱骗线直接供电，整体重量较轻，便于携带，精心设计的多种功能，更方便各位HAM在野外的架台使用。
+AntRunner是MuseLab设计实现的便携式天线旋转器，支持360度方位角和180度俯仰角的控制，可承重最大10KG的天线，支持平台 Windows/Linux/Mac/RaspberryPi/Android，配合对应的开源上位机可实现卫星的实时自动指向跟踪，支持有线（串口）与无线（ Wifi 2.4G）2种控制方式，支持多种规格的天线（一般为八木天线），安装方便。使用12V电池供电，可利用充电宝+12V快充诱骗线直接供电，整体重量较轻，便于携带，精心设计的多种功能，更方便各位HAM在野外的架台使用。
 
 ![AntRunner-1](https://github.com/wuxx/AntRunner/blob/master/doc/1.jpg)
 ![AntRunner-3](https://github.com/wuxx/AntRunner/blob/master/doc/3.jpg)
@@ -93,7 +93,8 @@ rotctld -vvvvv -m 2401 -r /dev/ttyUSB0
 
 ### Android
 #### Look4Sat 
-由于Android 不支持Hamlib，需要通过额外硬件系统转换 TODO
+目前已经实现通过Look4Sat控制，需要额外的控制板，具体参考此项目[Look4Sat-AntRunner-Controller](https://github.com/wuxx/Look4Sat-AntRunner-Controller)  
+注意：由于Look4Sat源码始终处于迭代开发中，适配代码可能过时，可能需要手动修改控制源码适配最新的Look4Sat
 
 ## 系统原理说明
 本节为技术原理细节描述，不感兴趣的朋友可直接忽略本节说明，直接前往实际操作章节使用。
